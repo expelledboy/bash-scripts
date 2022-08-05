@@ -4,6 +4,8 @@ Useful bash scripts, that make writing bash bearable.
 
 ### Available Scripts
 
+> TODO: Generate from `./bin/*` files
+
 ```
 > assert-env-exists MY_ENV_VAR
 +error: MY_ENV_VAR is not set in the environment
@@ -12,6 +14,14 @@ Useful bash scripts, that make writing bash bearable.
 ### Nix Flake
 
 This was my first attempt at creating a nix flake.
+
+Include it in your `flake.nix` as follows:
+
+```nix
+{
+  inputs.bash-scripts.url = "github:expelledboy/bash-scripts";
+}
+```
 
 ### Reference Material
 
