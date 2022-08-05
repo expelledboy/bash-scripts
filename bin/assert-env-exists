@@ -1,0 +1,11 @@
+#!/usr/bin/env bash -eo pipefail
+
+# Usage: assert-env-exists <env-var-name>
+# Eg. assert-env-exists HOME
+
+ENV_NAME="$1"
+
+if [ -z "${!ENV_NAME}" ]; then
+    echo "Environment variable '$ENV_NAME' is not set"
+    exit 1
+fi
